@@ -1,21 +1,101 @@
+/*
+    Saber redirigir a un archivo ttf desde css
+*/
+@font-face {
+    font-family: 'Bricolage Grotesque';
+    src: url('assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf') format('truetype');
+}
+
 * {
+    font-size: 18px;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: white;
+    font-family: 'Bricolage Grotesque', sans-serif;
 }
 
 body {
     background: linear-gradient(90deg,hsl(243, 96%, 9%) 0%, hsl(248, 70%, 36%) 100%);
 }
 
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
 header {
     display: flex;
-    width: 80%;
     justify-content: space-between;
 
     /* padding y margin - Siguen el sentido de la aguja del reloj */
     /* Primero siempre top, luego siempre right, luego siempre bottom, luego siempre left */
 
-    margin: 0 auto; /* syntax sugar - shorthands */
     padding: 1rem 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 1.5rem 0;
+}
+
+section#busqueda {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-input {
+    background-color: hsl(243, 23%, 30%);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+}
+
+.search-input input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    min-width: 400px;
+}
+
+.search-input input::placeholder {
+    color: white;
+}
+
+.btn {
+    border-radius: 0.5rem;
+    padding: 10px;
+    border: none;
+}
+
+.btn.primary {
+    background-color: hsl(233, 67%, 56%);
+}
+
+.btn.secondary {
+    background-color: hsl(243, 23%, 30%);
+}
+
+section#contenedor-info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    min-height: 200px;
+    gap: 20px;
+}
+
+section#contenedor-info main {
+    background-color: red;
+}
+
+section#contenedor-info aside {
+    background-color: pink;
 }
