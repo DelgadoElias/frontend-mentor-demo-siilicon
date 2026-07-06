@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(90deg,hsl(243, 96%, 9%) 0%, hsl(248, 70%, 36%) 100%);
+}
+
+header {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+
+    /* padding y margin - Siguen el sentido de la aguja del reloj */
+    /* Primero siempre top, luego siempre right, luego siempre bottom, luego siempre left */
+
+    margin: 0 auto; /* syntax sugar - shorthands */
+    padding: 1rem 0;
+}
